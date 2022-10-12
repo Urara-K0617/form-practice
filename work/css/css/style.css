@@ -1,1 +1,224 @@
 @charset "UTF-8";
+
+.wrapper {
+  width: 100%;
+  background: #cff1ff;
+}
+
+.outline--form {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.form--wrapper {
+  background: #ecfaff;
+  margin-top: 60px;
+  padding: 50px;
+}
+
+.top--title {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 28px;
+}
+
+.form--title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.personal--content, .account--content, .contact--content, .subscription--content, .submit--content{
+  margin-top: 50px;
+}
+
+.content--title {
+  font-size: 18px;
+  color: #000;
+}
+
+.labels {
+  margin-top: 25px;
+}
+
+.label--text {
+  font-size: 14px;
+  color: #464646;
+}
+
+.input--area {
+  margin-top: 6px;
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  color: #545658;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  background: #fbfbfb;
+}
+
+.required {
+  color: #e40000;
+}
+
+.select--area, .gender {
+  margin-top: 6px;
+}
+
+.select--flex {
+  display: flex;
+}
+
+.select--factor {
+  width: 100%;
+  position: relative;
+}
+
+.input--area {
+  width: 100%;
+  height: 35px;
+  margin-top: 6px;
+  padding: 5px;
+  color: #545658;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  background: #fbfbfb;
+}
+
+/* 入力欄をクリックした時 */
+.input--area:focus{
+  background-color: #fff;
+  border-color: rgba(93, 130, 194, 0.4);
+  box-shadow: 0px 0px 0px 2px rgba(1, 90, 191, 0.1);
+}
+
+/* 元のスタイルを削除 */
+input,
+select,
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0px;
+}
+
+.select--factor::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  right: 10px;
+  top: 45%;
+  display: inline-block;
+  border-bottom: 2px solid #c3c3c3;
+  border-right: 2px solid #c3c3c3;
+  transform: rotate(45deg);
+}
+
+
+.gender--choice {
+  margin-left: 10px;
+}
+
+.gender--choice:first-child {
+  margin-left: 0;
+}
+
+.gender--choice span {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+  color: #545658;
+}
+
+/* ラジオボタンのかこいの丸 */
+.gender--choice span::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  top: 50%;
+  left: 0%;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  transform: translateY(-50%)
+}
+
+/* ラジオボタン選択のスタイル 直後に隣接している要素適用＋ */
+.gender--content:checked+span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #017cbf;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.subscription--label{
+  position: relative;
+  padding-left: 25px;
+}
+
+/* チェックボックスの箱 */
+.subscription--label::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  margin-top: -8px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+}
+
+/* チェックボックスのチェック時のスタイル　絶対位置を指定 */
+.subscription--factor input:checked + .subscription--label::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  width: 6px;
+  height: 13px;
+  margin-top: -11px;
+  border-right: 3px solid #0140bf;
+  border-bottom: 3px solid #0140bf;
+  transform: rotate(45deg);
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.3s;
+  padding: 13px;
+  width:100%;
+  background: #0170bf;
+  color: #fff;
+}
+
+.btn:active{
+  background: #fff;
+  color: #0170bf;
+  border: 1px solid #d9d9d9;
+}
+
+.other--text{
+  margin-top: 25px;
+  font-size: 10px;
+}
+
+.link--color{
+  color: #0170bf;
+  text-decoration: none;
+}
